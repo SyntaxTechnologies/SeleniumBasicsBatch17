@@ -1,0 +1,53 @@
+*****************************Selenium 02**************************
+
+
+1. id
+
+
+
+2. name
+
+
+3. class (classname)
+
+
+
+
+
+precatuions:
+1. what ever locator that you choose please make sure it is unqiue enough,
+2. we should avoid the locstors that have digits and spaces.
+
+
+
+In case of duplicate locator:
+if in case u used a locator that had a duplicate value, selenium is going to find the first one and interact with it.
+
+linktext:
+
+1.the element must be in "a" tag , a tag is also called anchor tag and it usually contains links
+2.the element must have some text
+if one of the condition is not fullfiled u cant use the linktext locator
+
+partial linktext:(  u can use partial text to locate elements)
+1.the element must be in "a" tag , a tag is also called anchor tag and it usually contains links
+2.the element must have some text
+if one of the condition is not fullfiled u cant use the linktext locator
+
+
+
+webElements commands
+
+1.clear()----> clear the test box
+2.gettext()--> get the text out of the element (if there is no text in the webelement it will return nothing)
+
+
+whats the purpose of driver.findElements()?
+to find multiple elements that match the condition
+
+
+driver.getattribute("")--->get the value of attribute mentioned.
+
+
+
+
