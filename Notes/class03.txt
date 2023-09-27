@@ -1,0 +1,68 @@
+*******************************************************Absolute Xpath
+Absolute XPath Expressions and Their Uses
+
+1. Definition
+
+Absolute XPath: It refers to the direct path from the root element to the desired element.
+Syntax: /html/body/div[1]/section[2]/...
+2. Characteristics
+
+Fixed Path: Starts from the root node and ends with the desired element.
+Fragility: Sensitive to changes. Any alteration in the path (like adding or removing an element) can break the XPath.
+3. Usage Scenarios
+
+Best for scenarios where the HTML structure is stable and changes are minimal.
+Not recommended for dynamic web pages where the structure is prone to changes.
+Example:
+
+<html>
+    <body>
+        <div>
+            <p>First Paragraph</p>
+            <p>Second Paragraph</p>
+        </div>
+        <div>
+            <span>Text</span>
+        </div>
+    </body>
+</html>
+xpath to reach span
+/html/body/div[2]/span
+
+****************************************************Relative XPath Expressions and Their Uses
+
+
+1. Basic Attribute Selector
+Syntax: //tagname[@attribute='value']
+Used to select elements based on a specific attribute value.
+Restrictions: Avoid using attributes with numbers and spaces for uniqueness.
+
+
+2. Text Selector
+Syntax: //tagname[text()='value']
+Selects elements based on the exact text they contain.
+Requirements: Element must have the specified text.
+
+
+3. Contains Method (Attribute and Text)
+For attributes: //tagname[contains(@attribute,'value')]
+For text: //tagname[contains(text(),'value')]
+Benefit: Allows for partial value selection.
+Applicability: Useful when attributes have digits or spaces or when exact values are unknown.
+
+
+4. Starts-With Method (Attribute and Text)
+For attributes: //tagname[starts-with(@attribute,'value')]
+For text: //tagname[starts-with(text(),'value')]
+Use: Selects elements where the attribute or text starts with a specified value.
+Note: Cannot use middle or end parts of the value, must use the starting portion.
+
+5. Indexing
+Syntax: (//tagname[@attribute='value'])[index]
+Application: Used when other unique selectors are unavailable.
+Guideline: Should be a last resort for selecting elements.
+
+
+6. Use of AND Operator
+Syntax: //tagname[@attribute1='value' and @attribute2='value2']
+Purpose: Combines multiple conditions to locate an element uniquely.
