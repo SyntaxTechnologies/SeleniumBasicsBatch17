@@ -30,7 +30,7 @@ public class Hw3 {
 
         for(WebElement checkBox:checkBoxes){
             String option = checkBox.getAttribute("value");
-            if(option.equals("Checkbox-2")){
+            if(option.equals("Checkbox-1")){
                 boolean state = checkBox.isEnabled();
                 System.out.println(state);
 //                If Checkbox1 is disabled:

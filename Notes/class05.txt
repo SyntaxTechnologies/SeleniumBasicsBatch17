@@ -1,0 +1,52 @@
+
+### Drop Down:
+
+- **Types:**
+  - **Single select**
+  - **Multi-select**
+
+- **Interacting with Drop-downs in Selenium:**
+  - Use the `Select` class. 
+    - **Prerequisite:** The dropdown should be defined with the `SELECT` tag in the DOM.
+
+  - **Approach for Both Single & Multi-Select Dropdowns:**
+    1. Inspect the dropdown.
+    2. Ensure it utilizes the `SELECT` tag.
+    3. Determine the locator for the WebElement dropdown.
+    4. Instantiate an object of the `Select` class (provide the WebElement as an argument).
+    5. Use methods from the `Select` class to choose an option:
+      - `selectByVisibleText()`
+      - `selectByValue()`
+      - `selectByIndex()`
+- **Additional Methods for Multi-Select:**
+    - `deselectByVisibleText()`
+    - `deselectByValue()`
+    - `deselectByIndex()`
+    - `deselectAll()`
+    - To check if a dropdown is multi-select, use `isMultiple()`: Returns `true` for multi-select dropdowns.
+
+---------------------------------------------------------------------
+### Alerts:
+
+- **Description:**
+  - An alert is a popup message that halts interactions until addressed.
+
+- **Types of Alerts:**
+  1. **Web-based alerts (HTML):** Can be inspected and actions can be performed.
+  2. **JavaScript alerts (Browser):** Managed using the `switchTo` method but cannot be inspected.
+  3. **Windows-based alerts:** Not manageable with Selenium.
+
+- **JavaScript Alerts:**
+  - **Varieties:**
+    1. **Simple Alert:** Click 'OK'.
+    2. **Confirmation Alert:** Choose 'Cancel' or 'OK'.
+    3. **Prompt Alert:** Provide input, then click 'OK'.
+
+  - **Methods for Handling:**
+    - `accept()`: Click 'OK'.
+    - `dismiss()`: Click 'Cancel'.
+    - `getText()`: Retrieve the alert message.
+    - `sendKeys()`: Input text (for prompt alerts).
+
+
+
