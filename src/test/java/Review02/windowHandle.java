@@ -51,17 +51,10 @@ public class windowHandle {
         }
 
    }
-
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
-
-
-
         driver.switchTo().window(mainPageHandle);
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
-
-
-
     }
 }
